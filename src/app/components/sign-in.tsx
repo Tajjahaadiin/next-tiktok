@@ -1,5 +1,14 @@
-"use client";
 import { signIn } from "@/auth";
+
 export default function SignIn() {
-  return <button onClick={() => signIn("tiktok")}>Sign in with TikTok</button>;
+  return (
+    <form
+      action={async () => {
+        "use server";
+        await signIn("tiktok");
+      }}
+    >
+      <button type="submit">Signin with TikTok</button>
+    </form>
+  );
 }
