@@ -8,7 +8,7 @@ export default function SignOut() {
         await signOut({ redirectTo: "/test" });
       }}
     >
-      <button type="submit">Signin with TikTok</button>
+      <button type="submit">Signout with TikTok</button>
     </form>
   );
 }
